@@ -30,7 +30,8 @@ export class ApiService {
   }
 
   public getTimeCardById(id: number):Observable<TimeCards>{
-    return this.httpClient.get<TimeCards>(this.apiURL,ApiService.httpOptions);
+    let cards = new Observable<TimeCards>();
+    return cards;
   }
 
   public getTimeCards():Observable<TimeCards[]>{
