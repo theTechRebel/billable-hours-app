@@ -1,0 +1,30 @@
+<div class="container">
+        <div class="row ustify-content-md-center">
+        <div class="col center-div">
+                <h3 align="center">Time Cards</h3>
+        <table class="table table-bordered responsive">
+                <thead>
+                    <tr>
+                    <th scope="col">Employee ID</th>
+                    <th scope="col">Project</th>
+                    <th scope="col">Rate</th>
+                    <th scope="col">Date</th>
+                    <th scope="col">Start Time</th>
+                    <th scope="col">End Time</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr *ngFor="let row of table" (click)="viewCard(row)">
+                        <td>{{row?.employeeID}}</td>
+                        <td>{{row?.project}}</td>
+                        <td>{{row?.rate}}</td>
+                        <td>{{row?.date}}</td>
+                        <td>{{row?.start_time}}</td>
+                        <td>{{row?.end_time}}</td>
+                    </tr>
+                </tbody>
+                </table>
+        </div>
+        
+        </div>
+        </div>

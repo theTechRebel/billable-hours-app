@@ -1,0 +1,39 @@
+<div class="container">
+    <div class="row ustify-content-md-center">
+    <div class="col"></div>
+    <div class="col-xs-12 col-sm-12 col-md-6 center-div">
+        <h3 align="center">View Time Card</h3>
+    <div class="form-group">
+    <label>Employee ID: {{timeCard?.employeeID}}</label>
+    
+    </div>
+    <div class="form-group">
+        <label>Billable Rate: {{timeCard?.rate}}</label>
+        
+    </div>
+    
+    <div class="form-group">
+    <label>Project: {{timeCard?.project}}</label>
+   
+    </div>
+    
+    <div class="form-group">
+    <label>Date: {{timeCard?.date}}</label>
+  
+    </div>
+    
+    <div class="form-group">
+        <label>Start Time: {{timeCard?.start_time}}</label>
+    </div>
+    
+    <div class="form-group">
+        <label>End Time: {{timeCard?.end_time}}</label>
+    </div>
+
+    <button type="submt"  (click)="viewCards()" class="btn btn-primary">All Time Cards</button>
+    <button type="submit" (click)="editCard()" class="btn btn-primary">Edit</button>
+    <button type="submit" class="btn btn-danger">Delete</button>
+    </div>
+    <div class="col"></div>
+    </div>
+    </div>

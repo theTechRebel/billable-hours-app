@@ -1,0 +1,61 @@
+<div class="container">
+    <div class="row ustify-content-md-center">
+    <div class="col"></div>
+    <div class="col-xs-12 col-sm-12 col-md-6 center-div">
+    <form [formGroup]="billForm" (ngSubmit)="onSubmit()">
+        <h3 align="center">Edit Time Card</h3>
+    <div class="form-group">
+    <label>Employee ID</label>
+    <input type="number" class="form-control" id="employeeID" placeholder="Enter Employee ID" formControlName="employeeID" required>
+    <div *ngIf="billForm.controls['employeeID']?.invalid && (billForm.controls['employeeID'].dirty || billForm.controls['employeeID'].touched)" class="alert alert-danger">
+        <div [hidden]="!billForm.controls['employeeID'].errors.required">Employee ID is required.</div>
+        <div [hidden]="!billForm.controls['employeeID'].errors.pattern">Employee ID should be numeric between 1 & 99</div>
+    </div>
+    </div>
+    <div class="form-group">
+        <label>Billable Rate</label>
+        <input type="number" class="form-control" id="rate" placeholder="Enter Billable Rate" formControlName="rate" required>
+        <div *ngIf="billForm.controls['rate']?.invalid && (billForm.controls['rate'].dirty || billForm.controls['rate'].touched)" class="alert alert-danger">
+            <div [hidden]="!billForm.controls['rate'].errors.required">Billable Rate is required.</div>
+            <div [hidden]="!billForm.controls['rate'].errors.pattern">Billable Rate cannot be 0</div>
+        </div>
+    </div>
+    
+    <div class="form-group">
+    <label>Project</label>
+    <input type="text" class="form-control" id="project" placeholder="Enter Project Name" formControlName="project" required>
+    <div *ngIf="billForm.controls['project']?.invalid && (billForm.controls['project'].dirty || billForm.controls['project'].touched)" class="alert alert-danger">
+    <div [hidden]="!billForm.controls['project'].errors.required">Project Name is required.</div>
+    </div>
+    </div>
+    
+    <div class="form-group">
+    <label>Date</label>
+    <input type="date" class="form-control" id="date" placeholder="Enter Date" formControlName="date" required>
+    <div *ngIf="billForm.controls['date']?.invalid && (billForm.controls['date'].dirty || billForm.controls['date'].touched)" class="alert alert-danger">
+        <div [hidden]="!billForm.controls['date'].errors.required">Date is required.</div>
+    </div>
+    </div>
+    
+    <div class="form-group">
+        <label>Start Time</label>
+        <input type="time" class="form-control" id="start_time" placeholder="Enter Start Time" formControlName="start_time" required>
+        <div *ngIf="billForm.controls['start_time']?.invalid && (billForm.controls['start_time'].dirty || billForm.controls['start_time'].touched)" class="alert alert-danger">
+            <div [hidden]="!billForm.controls['start_time'].errors.required">Start Time is required.</div>
+        </div>
+    </div>
+    
+    <div class="form-group">
+        <label>End Time</label>
+        <input type="time" class="form-control" id="end_time" placeholder="Enter End Time" formControlName="end_time" required>
+        <div *ngIf="billForm.controls['end_time']?.invalid && (billForm.controls['end_time'].dirty || billForm.controls['end_time'].touched)" class="alert alert-danger">
+            <div [hidden]="!billForm.controls['end_time'].errors.required">End Time is required.</div>
+        </div>
+    </div>
+    
+    <button type="submit" class="btn btn-primary" [disabled]="!billForm.valid">Save</button>
+    </form>
+    </div>
+    <div class="col"></div>
+    </div>
+    </div>

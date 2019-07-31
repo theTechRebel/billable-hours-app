@@ -1,0 +1,22 @@
+<div class="container">
+<div class="row ustify-content-md-center">
+<div class="col center-div">
+        <h3 align="center">Timetable</h3>
+<table class="table table-bordered responsive">
+        <thead>
+            <tr>
+            <th scope="col">Project</th>
+            <th scope="col">Total Number of Hours</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let row of table">
+                <td>{{row.project}}</td>
+                <td>{{row.hours}}</td>
+            </tr>
+        </tbody>
+        </table>
+</div>
+
+</div>
+</div>

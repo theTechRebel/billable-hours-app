@@ -1,0 +1,10 @@
+[
+    {
+        "employeeID": 1,
+        "rate": 300,
+        "project": "Google",
+        "date":"01-01-2019",
+        "start_time":"09-01 AM",
+        "end_time":"12-01 PM"
+    }
+]
